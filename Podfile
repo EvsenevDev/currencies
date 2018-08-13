@@ -10,4 +10,5 @@ end
 
 target 'currenciesTests' do
     pods
+    pod 'Cuckoo'
 end
