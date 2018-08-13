@@ -2,7 +2,7 @@
 //  Global.swift
 //  currencies
 //
-//  Created by b.evsenev on 13/08/2018.
+//  Created by Bogdan Evsenev on 13/08/2018.
 //  Copyright © 2018 test. All rights reserved.
 //
 

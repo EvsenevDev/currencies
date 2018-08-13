@@ -1,5 +1,5 @@
 //
-//  CurrencyResponse.swift
+//  RatesModel.swift
 //  currencies
 //
 //  Created by Bogdan Evsenev on 11/08/2018.
@@ -11,9 +11,9 @@ import Foundation
 fileprivate let BASE_KEY = "base"
 fileprivate let RATES_KEY = "rates"
 
-class CurrencyResponse {
+class RatesModel {
     private(set) var base: String
-    private(set) var models: [CurrencyModel]
+    private(set) var currencies: [CurrencyModel]
     
     init?(json: [String: Any]) {
         guard let base = json[BASE_KEY] as? String else { return nil }
@@ -24,7 +24,7 @@ class CurrencyResponse {
             let model = CurrencyModel(code: code, rate: rate, isBase: false)
             models.append(model)
         }
-        self.models = models
+        self.currencies = models
     }
     
 }

@@ -9,12 +9,12 @@
 import UIKit
 
 class CurrenciesDataSource: NSObject, UITableViewDataSource {
-    private(set) var viewModels: [CurrencyViewModel]
+    private(set) var viewModels = [CurrencyViewModel]()
     private weak var tableView: UITableView!
     
-    init(tableView: UITableView, viewModels: [CurrencyViewModel] = []) {
-        self.viewModels = viewModels
+    init(tableView: UITableView) {
         self.tableView = tableView
+        tableView.registerCell(name: CurrencyCell.nibName)
     }
     
     // MARK: - Interface

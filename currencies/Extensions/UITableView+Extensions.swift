@@ -14,5 +14,5 @@ extension UITableView {
         let nib = UINib(nibName: name, bundle: nil)
         register(nib, forCellReuseIdentifier: name)
     }
-    
+
 }

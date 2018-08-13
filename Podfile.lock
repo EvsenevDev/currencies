@@ -2,20 +2,24 @@ PODS:
   - Alamofire (4.7.3)
   - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
+  - Viperit (1.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - Viperit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - Viperit
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  Viperit: 276b9f0943edb5436fbff008abd8756004149814
 
-PODFILE CHECKSUM: cd88f56a1f7bc0707182155c698390528a26e7e5
+PODFILE CHECKSUM: 8d70c96a023f67551c14cabc244f08a88c48f93f
 
 COCOAPODS: 1.5.2
