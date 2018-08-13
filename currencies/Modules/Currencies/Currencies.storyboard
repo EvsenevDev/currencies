@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CurrenciesView-->
+        <scene sceneID="am8-Fv-UfU">
+            <objects>
+                <viewController storyboardIdentifier="CurrenciesView" title="Currencies" id="Rjq-OE-jy4" userLabel="CurrenciesView" customClass="CurrenciesView" customModule="currencies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sPq-z6-Yc5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" estimatedRowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="liG-DY-XFq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nyj-La-1xO" firstAttribute="trailing" secondItem="liG-DY-XFq" secondAttribute="trailing" id="QOw-IC-FBv"/>
+                            <constraint firstItem="liG-DY-XFq" firstAttribute="top" secondItem="nyj-La-1xO" secondAttribute="top" id="cDk-Na-uFF"/>
+                            <constraint firstItem="liG-DY-XFq" firstAttribute="leading" secondItem="nyj-La-1xO" secondAttribute="leading" id="jdg-kx-aIy"/>
+                            <constraint firstAttribute="bottom" secondItem="liG-DY-XFq" secondAttribute="bottom" id="uJg-Pb-Zbq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nyj-La-1xO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currencies" id="HHc-jT-6eX"/>
+                    <connections>
+                        <outlet property="tableView" destination="liG-DY-XFq" id="HjV-BX-oiw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="le5-mb-56j" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="81"/>
+        </scene>
+    </scenes>
+</document>

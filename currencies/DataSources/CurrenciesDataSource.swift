@@ -8,16 +8,37 @@
 
 import UIKit
 
-class CurrenciesDataSource: NSObject, UITableViewDataSource {
-    private(set) var viewModels: [CurrencyViewModel]
-    private weak var tableView: UITableView!
+class CurrenciesDataSource: NSObject {
+    fileprivate(set) var viewModels = [CurrencyViewModel]()
+    fileprivate weak var tableView: UITableView!
     
-    init(tableView: UITableView, viewModels: [CurrencyViewModel] = []) {
-        self.viewModels = viewModels
-        self.tableView = tableView
+    init(tableView: UITableView) {
+        super.init()
+        configure(tableView: tableView)
+    }
+}
+
+
+// MARK: - UITableViewDataSource
+extension CurrenciesDataSource: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModels.count
     }
     
-    // MARK: - Interface
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyCell.nibName) as! CurrencyCell
+        cell.fill(viewModel: viewModels[indexPath.row])
+        return cell
+    }
+}
+
+
+// MARK: - CurrenciesDataSource API
+extension CurrenciesDataSource: CurrenciesDataSourceApi {
+    func configure(tableView: UITableView) {
+        self.tableView = tableView
+        self.tableView.registerCell(name: CurrencyCell.nibName)
+    }
     
     func update(models: [CurrencyViewModel]) {
         self.viewModels = models
@@ -39,18 +60,4 @@ class CurrenciesDataSource: NSObject, UITableViewDataSource {
         tableView.moveRow(at: indexPath, to: firstIndexPath)
         tableView.scrollToRow(at: firstIndexPath, at: .top, animated: false)
     }
-    
-    // MARK: - UITableViewDataSource
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyCell.nibName) as! CurrencyCell
-        cell.fill(viewModel: viewModels[indexPath.row])
-        return cell
-    }
-    
-    
 }
