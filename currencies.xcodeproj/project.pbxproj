@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2792F16521216B1000094984 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792F16421216B1000094984 /* Global.swift */; };
 		27C1A0B1211D4CA400780113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1A0B0211D4CA400780113 /* AppDelegate.swift */; };
 		27C1A0B3211D4CA400780113 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1A0B2211D4CA400780113 /* ViewController.swift */; };
 		27C1A0B6211D4CA400780113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C1A0B4211D4CA400780113 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2792F16421216B1000094984 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		27C1A0AD211D4CA400780113 /* currencies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = currencies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C1A0B0211D4CA400780113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C1A0B2211D4CA400780113 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				27C1A0DA211D563B00780113 /* DataSources */,
 				27C1A0D6211D54C200780113 /* Extensions */,
 				27C1A0B0211D4CA400780113 /* AppDelegate.swift */,
+				2792F16421216B1000094984 /* Global.swift */,
 				27C1A0B4211D4CA400780113 /* Main.storyboard */,
 				27C1A0B7211D4CA500780113 /* Assets.xcassets */,
 				27C1A0B9211D4CA500780113 /* LaunchScreen.storyboard */,
@@ -335,6 +338,7 @@
 				71282783211F10CF00FDC394 /* CurrencyResponse.swift in Sources */,
 				718AAC08211FA71700290183 /* API.swift in Sources */,
 				7128277C211EF72F00FDC394 /* CurrencyService.swift in Sources */,
+				2792F16521216B1000094984 /* Global.swift in Sources */,
 				27C1A0DC211D565800780113 /* CurrenciesDataSource.swift in Sources */,
 				27C1A0B1211D4CA400780113 /* AppDelegate.swift in Sources */,
 				71282786211F18AA00FDC394 /* CurrencyViewModel.swift in Sources */,

@@ -59,7 +59,7 @@ class CurrencyCell: UITableViewCell, UITextFieldDelegate {
     // MARK: - UITextFieldDelegate
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let separator = NSLocale.current.decimalSeparator, let text = textField.text else { return true }
+        guard let separator = decimalSeparator, let text = textField.text else { return true }
         if string == separator {
             return !text.isEmpty && !text.contains(string)
         }
@@ -67,7 +67,7 @@ class CurrencyCell: UITableViewCell, UITextFieldDelegate {
     }
     
     @objc private func textFieldDidChange(_ textField: UITextField) {
-        let value = Double(textField.text!) ?? 0.00
+        let value = currencyFormatter.number(from: textField.text!)?.doubleValue ?? 0
         onValueChange?(value)
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 
 class CurrencyViewModel {
-    private(set) var value = "0.00"
+    private(set) var value = "0"
     private(set) var code: String
     private(set) var rawRate: Double
     
@@ -20,20 +20,8 @@ class CurrencyViewModel {
     }
     
     func update(value: Double) {
-        self.value = formatter.string(from: NSNumber(value: value * rawRate)) ?? self.value
+        self.value = currencyFormatter.string(from: NSNumber(value: value * rawRate)) ?? self.value
     }
-}
-
-fileprivate var numberFormatter: NumberFormatter?
-fileprivate var formatter: NumberFormatter {
-    guard let formatter = numberFormatter else {
-        numberFormatter = NumberFormatter()
-        numberFormatter?.minimumFractionDigits = 2
-        numberFormatter?.maximumFractionDigits = 4
-        numberFormatter?.minimumIntegerDigits = 1
-        return numberFormatter!
-    }
-    return formatter
 }
 
 
