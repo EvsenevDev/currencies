@@ -12,22 +12,7 @@ import Cuckoo
 
 import Viperit
 
-class MockCurrenciesRouterApi: CurrenciesRouterApi, Cuckoo.ProtocolMock {
-    var _presenter: Presenter!
-    
-    var _view: UserInterface!
-    
-    func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool) {
-       
-    }
-    
-    func show(from: UIViewController, embedInNavController: Bool, setupData: Any?) {
-       
-    }
-    
-    func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?) {
-       
-    }
+class MockCurrenciesRouterApi: Router, CurrenciesRouterApi, Cuckoo.ProtocolMock {
     
     typealias MocksType = CurrenciesRouterApi
     typealias Stubbing = __StubbingProxy_CurrenciesRouterApi
@@ -93,11 +78,7 @@ class CurrenciesRouterApiStub: CurrenciesRouterApi {
 }
 
 
-class MockCurrenciesViewApi: CurrenciesViewApi, Cuckoo.ProtocolMock {
-    var _presenter: Presenter!
-    
-    var _displayData: DisplayData!
-    
+class MockCurrenciesViewApi: UserInterface, CurrenciesViewApi, Cuckoo.ProtocolMock {
     typealias MocksType = CurrenciesViewApi
     typealias Stubbing = __StubbingProxy_CurrenciesViewApi
     typealias Verification = __VerificationProxy_CurrenciesViewApi
@@ -177,37 +158,7 @@ class CurrenciesViewApiStub: CurrenciesViewApi {
 }
 
 
-class MockCurrenciesPresenterApi: CurrenciesPresenterApi, Cuckoo.ProtocolMock {
-    var _interactor: Interactor!
-    
-    var _view: UserInterface!
-    
-    var _router: Router!
-    
-    func setupView(data: Any) {
-       
-    }
-    
-    func viewHasLoaded() {
-       
-    }
-    
-    func viewIsAboutToAppear() {
-       
-    }
-    
-    func viewHasAppeared() {
-       
-    }
-    
-    func viewIsAboutToDisappear() {
-       
-    }
-    
-    func viewHasDisappeared() {
-       
-    }
-    
+class MockCurrenciesPresenterApi: Presenter, CurrenciesPresenterApi, Cuckoo.ProtocolMock {
     typealias MocksType = CurrenciesPresenterApi
     typealias Stubbing = __StubbingProxy_CurrenciesPresenterApi
     typealias Verification = __VerificationProxy_CurrenciesPresenterApi
@@ -367,9 +318,7 @@ class CurrenciesPresenterApiStub: CurrenciesPresenterApi {
 }
 
 
-class MockCurrenciesInteractorApi: CurrenciesInteractorApi, Cuckoo.ProtocolMock {
-    var _presenter: Presenter!
-    
+class MockCurrenciesInteractorApi: Interactor, CurrenciesInteractorApi, Cuckoo.ProtocolMock {
     typealias MocksType = CurrenciesInteractorApi
     typealias Stubbing = __StubbingProxy_CurrenciesInteractorApi
     typealias Verification = __VerificationProxy_CurrenciesInteractorApi

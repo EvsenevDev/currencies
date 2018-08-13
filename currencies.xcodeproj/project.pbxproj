@@ -30,6 +30,8 @@
 		71282786211F18AA00FDC394 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71282785211F18AA00FDC394 /* CurrencyViewModel.swift */; };
 		718AAC08211FA71700290183 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AAC07211FA71700290183 /* API.swift */; };
 		71C0B4F221223240001D601B /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C0B4F121223240001D601B /* GeneratedMocks.swift */; };
+		71C0B4F4212235EA001D601B /* CurrenciesModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C0B4F3212235EA001D601B /* CurrenciesModuleTests.swift */; };
+		71C0B4F621223984001D601B /* MatchableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C0B4F521223984001D601B /* MatchableExtensions.swift */; };
 		F91DACEBA817E9104F6FED7D /* libPods-currencies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2228B84EAAD19A423ED9A5E /* libPods-currencies.a */; };
 		FAC820357ACC47613938FFB3 /* libPods-currenciesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 810B76C355E99E2210E18412 /* libPods-currenciesTests.a */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		71282785211F18AA00FDC394 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
 		718AAC07211FA71700290183 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		71C0B4F121223240001D601B /* GeneratedMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		71C0B4F3212235EA001D601B /* CurrenciesModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesModuleTests.swift; sourceTree = "<group>"; };
+		71C0B4F521223984001D601B /* MatchableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchableExtensions.swift; sourceTree = "<group>"; };
 		810B76C355E99E2210E18412 /* libPods-currenciesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-currenciesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB558E1EFCD974A5C3A195A /* Pods-currenciesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currenciesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-currenciesTests/Pods-currenciesTests.release.xcconfig"; sourceTree = "<group>"; };
 		B2228B84EAAD19A423ED9A5E /* libPods-currencies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-currencies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				71C0B4F121223240001D601B /* GeneratedMocks.swift */,
+				71C0B4F521223984001D601B /* MatchableExtensions.swift */,
 				27C1A0C5211D4CA500780113 /* ModelsTests.swift */,
+				71C0B4F3212235EA001D601B /* CurrenciesModuleTests.swift */,
 				27C1A0C7211D4CA500780113 /* Info.plist */,
 			);
 			path = currenciesTests;
@@ -427,7 +433,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C1A0C6211D4CA500780113 /* ModelsTests.swift in Sources */,
+				71C0B4F621223984001D601B /* MatchableExtensions.swift in Sources */,
 				71C0B4F221223240001D601B /* GeneratedMocks.swift in Sources */,
+				71C0B4F4212235EA001D601B /* CurrenciesModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
