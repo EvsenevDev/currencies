@@ -11,10 +11,10 @@ import Viperit
 
 // MARK: - CurrenciesDisplayData class
 final class CurrenciesDisplayData: DisplayData {
-    fileprivate(set) var currenciesDataSource: CurrenciesDataSource?
+    fileprivate(set) var currenciesDataSource: CurrenciesDataSourceApi?
     
     var dataSource: UITableViewDataSource? {
-        return currenciesDataSource
+        return currenciesDataSource as? UITableViewDataSource
     }
 }
 
