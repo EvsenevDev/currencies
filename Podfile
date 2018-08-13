@@ -1,7 +1,13 @@
+def pods
+    pod 'Alamofire'
+    pod 'AlamofireImage'
+    pod 'Viperit'
+end
+
 target 'currencies' do
+  pods
+end
 
-  pod 'Alamofire'
-  pod 'AlamofireImage'
-  pod 'Viperit'
-
+target 'currenciesTests' do
+    pods
 end
